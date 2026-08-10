@@ -1,0 +1,11 @@
+{
+  "name": "Mosaad & Maryam Wedding Invitation",
+  "short_name": "M & M Wedding",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#F7F3EA",
+  "theme_color": "#151311",
+  "icons": [
+    { "src": "favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}
