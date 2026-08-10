@@ -110,7 +110,7 @@ attendance question.
 1. Push this project to a GitHub repository, e.g. `mosaad-maryam-wedding`.
 2. In `vite.config.js`, set `base` to match your repo name exactly:
    ```js
-   base: "/mosaad-maryam-weeding/"
+   base: "/mosaad-maryam-wedding/";
    ```
    (If deploying to a `USERNAME.github.io` root repo instead, use `base: "/"`.)
 3. In your repo settings → **Pages**, set the source to **GitHub Actions**.

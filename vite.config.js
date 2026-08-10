@@ -5,7 +5,7 @@ import react from "@vitejs/plugin-react";
 // If deploying to a custom domain or user/org page (username.github.io), use "/"
 export default defineConfig({
   plugins: [react()],
-  base: "/mosaad-maryam-weeding/",
+  base: "/mosaad-maryam-wedding/",
   build: {
     outDir: "dist",
   },
