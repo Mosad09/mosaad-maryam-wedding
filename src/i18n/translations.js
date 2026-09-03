@@ -9,7 +9,6 @@ export const translations = {
     },
     intro: {
       tapToOpen: "Open Invitation",
-      skip: "Skip",
     },
     countdown: {
       title: "Counting down to forever",
@@ -55,7 +54,6 @@ export const translations = {
     },
     intro: {
       tapToOpen: "افتح الدعوة",
-      skip: "تخطي",
     },
     countdown: {
       title: "العد التنازلي لأبديتنا",
