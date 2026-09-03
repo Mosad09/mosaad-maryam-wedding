@@ -44,7 +44,7 @@ const weddingData = {
   // Single combined childhood photo — replaces the old two-photo layout.
   childhood: {
     title: { en: "Long before forever had a name.", ar: "من زمان... وقبل ما نعرف إن الحكاية هتجمعنا." },
-    photo: asset("assets/images/childhood/childhood.jpg"),
+    photo: asset("assets/images/childhood/childhood.png"),
   },
 
   events: {
