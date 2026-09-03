@@ -21,7 +21,8 @@ export default function App() {
   const [opened, setOpened] = useState(false);
 
   useEffect(() => {
-    const id = setTimeout(() => setLoading(false), 700);
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const id = setTimeout(() => setLoading(false), reducedMotion ? 150 : 900);
     return () => clearTimeout(id);
   }, []);
 

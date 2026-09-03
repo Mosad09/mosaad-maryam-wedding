@@ -74,11 +74,9 @@ export default function EnvelopeIntro({ onComplete }) {
             className="flex flex-col items-center gap-5 px-8"
             aria-label={t("intro.tapToOpen")}
           >
-            <div className="w-40 h-40 rounded-full border gold-border flex items-center justify-center bg-warmwhite shadow-lg">
-              <span className="font-couple-names text-5xl text-gold">
-                {weddingData.couple.monogram}
-              </span>
-            </div>
+            <span className="font-couple-names text-4xl text-gold mb-1">
+              {weddingData.couple.monogram}
+            </span>
             <p className="font-display text-sm md:text-base text-charcoal/75 max-w-xs text-center leading-relaxed">
               {pick(weddingData.openingMessage)}
             </p>

@@ -1,25 +1,27 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import weddingData from "../data/weddingData.js";
 
+// A brief, elegant fade — not a spinner or looping animation. Respects
+// prefers-reduced-motion by rendering with no motion at all.
 export default function LoadingScreen() {
+  const [reducedMotion, setReducedMotion] = useState(false);
+
+  useEffect(() => {
+    const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
+    setReducedMotion(mq.matches);
+  }, []);
+
   return (
-    <div className="fixed inset-0 z-[1000] flex flex-col items-center justify-center gap-6 bg-ivory dark:bg-dark">
-      <motion.span
-        className="font-couple-names text-5xl text-gold"
-        animate={{ opacity: [0.4, 1, 0.4] }}
-        transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut" }}
+    <div className="fixed inset-0 z-[1000] flex items-center justify-center bg-ivory dark:bg-dark">
+      <motion.p
+        className="font-couple-names text-4xl md:text-5xl text-gold"
+        initial={reducedMotion ? { opacity: 1 } : { opacity: 0, y: 6 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: reducedMotion ? 0 : 0.5, ease: "easeOut" }}
       >
-        {weddingData.couple.monogram}
-      </motion.span>
-      <div className="w-32 h-px bg-gold/30 overflow-hidden">
-        <motion.div
-          className="h-full bg-gold"
-          initial={{ x: "-100%" }}
-          animate={{ x: "100%" }}
-          transition={{ duration: 1.4, repeat: Infinity, ease: "easeInOut" }}
-        />
-      </div>
+        {weddingData.couple.groom.nameAr} &amp; {weddingData.couple.bride.nameAr}
+      </motion.p>
     </div>
   );
 }
