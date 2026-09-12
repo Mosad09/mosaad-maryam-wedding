@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useLanguage } from "../i18n/LanguageContext.jsx";
-import LanguageSwitcher from "./LanguageSwitcher.jsx";
 import ThemeToggle from "./ThemeToggle.jsx";
 import weddingData from "../data/weddingData.js";
 
@@ -41,15 +40,14 @@ export default function Navbar() {
           ))}
         </div>
 
-        <div className="hidden md:flex items-center gap-2">
-          <LanguageSwitcher />
+        <div className="hidden md:flex items-center">
           <ThemeToggle />
         </div>
 
         <button
           className="md:hidden text-2xl text-gold"
           onClick={() => setOpen((o) => !o)}
-          aria-label="Toggle menu"
+          aria-label="فتح القائمة"
         >
           {open ? "✕" : "☰"}
         </button>
@@ -62,8 +60,7 @@ export default function Navbar() {
               {t(`nav.${s}`)}
             </button>
           ))}
-          <div className="flex gap-3 pt-4">
-            <LanguageSwitcher />
+          <div className="pt-2">
             <ThemeToggle />
           </div>
         </div>

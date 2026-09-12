@@ -26,13 +26,13 @@ const weddingData = {
     image: asset("assets/images/gallery/hero.jpg"),
     headline: {
       en: "Together begins forever.",
-      ar: "معًا تبدأ الأبدية.",
+      ar: "مع بعض، تبدأ حكاية العمر.",
     },
   },
 
   openingMessage: {
     en: "With love, we invite you to celebrate with us",
-    ar: "بكل حب، ندعوكم للاحتفال معنا",
+    ar: "بكل الحب، بندعوكم تشاركونا فرحتنا",
   },
 
   music: {
@@ -43,7 +43,7 @@ const weddingData = {
 
   // Single combined childhood photo — replaces the old two-photo layout.
   childhood: {
-    title: { en: "Long before forever had a name.", ar: "من زمان... وقبل ما نعرف إن الحكاية هتجمعنا." },
+    title: { en: "Long before forever had a name.", ar: "من زمان، وقبل ما نعرف إن الأقدار هتجمعنا." },
     photo: asset("assets/images/childhood/childhood.png"),
   },
 
@@ -55,7 +55,7 @@ const weddingData = {
       location: { en: "Bahtim, Shubra El Kheima, Egypt", ar: "بهتيم، شبرا الخيمة، مصر" },
       description: {
         en: "A joyful evening surrounded by family as we marked the beginning of our journey.",
-        ar: "أمسية سعيدة أحاطتنا فيها العائلة احتفالًا ببداية رحلتنا.",
+        ar: "سهرة حلوة جمعتنا مع أهلنا، واحتفلنا فيها ببداية حكايتنا.",
       },
       photo: asset("assets/images/events/engagement.jpg"),
     },
@@ -65,9 +65,9 @@ const weddingData = {
       time: { en: "7:00 PM", ar: "٧:٠٠ مساءً" },
       description: {
         en: "The signing of our marriage contract, witnessed by our closest family.",
-        ar: "توثيق عقد قراننا بحضور أقرب أفراد العائلة.",
+        ar: "كتبنا كتابنا بحضور أحلى ناس في حياتنا.",
       },
-      photo: asset("assets/images/events/katb-ketab.jpg"),
+      photo: asset("assets/images/events/katb-ketab.png"),
     },
     wedding: {
       title: { en: "The Wedding", ar: "حفل الزفاف" },
@@ -102,41 +102,41 @@ const weddingData = {
   photoStory: [
     {
       image: asset("assets/images/gallery/story-1.jpg"),
-      text: { en: "Together begins forever.", ar: "معًا تبدأ الأبدية." },
+      text: { en: "Together begins forever.", ar: "مع بعض، تبدأ حكاية العمر." },
     },
     {
       image: asset("assets/images/gallery/story-2.jpg"),
-      text: { en: "And now, our forever begins.", ar: "والآن، تبدأ أبديتنا." },
+      text: { en: "And now, our forever begins.", ar: "ودلوقتي، بتبدأ حكايتنا احنا الاتنين." },
     },
   ],
 
   faq: [
     {
-      q: { en: "Where is the wedding?", ar: "أين يقام حفل الزفاف؟" },
+      q: { en: "Where is the wedding?", ar: "هيكون الفرح فين؟" },
       a: {
         en: "The wedding will be held at Kempinski Concert Hall, Bahtim, Egypt.",
-        ar: "سيقام حفل الزفاف في قاعة كمبينسكي للحفلات، بهتيم، مصر.",
+        ar: "هيكون الفرح في قاعة كمبينسكي للحفلات، بهتيم، مصر.",
       },
     },
     {
-      q: { en: "Is parking available?", ar: "هل يتوفر موقف للسيارات؟" },
+      q: { en: "Is parking available?", ar: "فيه جراچ للعربيات؟" },
       a: {
         en: "Yes, complimentary parking is available on-site for all guests.",
-        ar: "نعم، يتوفر موقف سيارات مجاني في الموقع لجميع الضيوف.",
+        ar: "أيوة، فيه جراچ مجاني للضيوف كلهم جنب القاعة.",
       },
     },
     {
-      q: { en: "What time should I arrive?", ar: "في أي وقت يجب أن أصل؟" },
+      q: { en: "What time should I arrive?", ar: "أوصل الساعة كام؟" },
       a: {
         en: "Guests are welcome to arrive from 7:00 PM.",
-        ar: "يسعدنا استقبال الضيوف بدءًا من الساعة ٧:٠٠ مساءً.",
+        ar: "يسعدنا نستقبلكم من الساعة ٧:٠٠ مساءً.",
       },
     },
     {
-      q: { en: "What is the venue address?", ar: "ما هو عنوان القاعة؟" },
+      q: { en: "What is the venue address?", ar: "عنوان القاعة إيه بالظبط؟" },
       a: {
         en: "Kempinski Concert Hall, Shubra El Kheima 2, Ismailia Canal Road, next to Al Tanmeya Club, Bahtim, Egypt.",
-        ar: "قاعة كمبينسكي للحفلات، شبرا الخيمه ثان ترعة الاسماعيلية بجوار نادي التنمية، بهتيم، مصر.",
+        ar: "قاعة كمبينسكي للحفلات، شبرا الخيمة ٢، ترعة الإسماعيلية، جنب نادي التنمية، بهتيم، مصر.",
       },
     },
   ],
@@ -149,10 +149,10 @@ const weddingData = {
   },
 
   seo: {
-    title: "مسعد & مريم | Wedding Invitation",
+    title: "مسعد & مريم | دعوة زفاف",
     description: {
       en: "Join Mosaad & Maryam as they celebrate their wedding on October 5, 2026.",
-      ar: "انضموا إلى مسعد ومريم للاحتفال بزفافهما في ٥ أكتوبر ٢٠٢٦.",
+      ar: "تعالوا نفرح مع بعض، مسعد ومريم بيتجوزوا يوم ٥ أكتوبر ٢٠٢٦.",
     },
   },
 };
