@@ -99,8 +99,6 @@ const weddingData = {
     mapsUrl: "https://maps.app.goo.gl/NEjZftPk12Mmaqr39",
   },
 
-
-
   faq: [
     {
       q: { en: "Where is the wedding?", ar: "هيكون الفرح فين؟" },

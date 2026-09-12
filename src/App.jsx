@@ -10,7 +10,6 @@ import KatbKetabSection from "./components/KatbKetabSection.jsx";
 import WeddingSection from "./components/WeddingSection.jsx";
 import WeddingSchedule from "./components/WeddingSchedule.jsx";
 import VenueSection from "./components/VenueSection.jsx";
-import PhotoStory from "./components/PhotoStory.jsx";
 import Guestbook from "./components/Guestbook.jsx";
 import FAQ from "./components/FAQ.jsx";
 import Contact from "./components/Contact.jsx";
@@ -48,7 +47,6 @@ export default function App() {
           <WeddingSchedule />
         </div>
         <VenueSection />
-        <PhotoStory />
         <Guestbook />
         <FAQ />
         <Contact />
