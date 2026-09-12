@@ -99,16 +99,7 @@ const weddingData = {
     mapsUrl: "https://maps.app.goo.gl/NEjZftPk12Mmaqr39",
   },
 
-  photoStory: [
-    {
-      image: asset("assets/images/gallery/story-1.jpg"),
-      text: { en: "Together begins forever.", ar: "مع بعض، تبدأ حكاية العمر." },
-    },
-    {
-      image: asset("assets/images/gallery/story-2.jpg"),
-      text: { en: "And now, our forever begins.", ar: "ودلوقتي، بتبدأ حكايتنا احنا الاتنين." },
-    },
-  ],
+
 
   faq: [
     {
