@@ -67,7 +67,7 @@ const weddingData = {
         en: "The signing of our marriage contract, witnessed by our closest family.",
         ar: "كتبنا كتابنا بحضور أحلى ناس في حياتنا.",
       },
-      photo: asset("assets/images/events/katb-ketab.jpg"),
+      photo: asset("assets/images/events/katb-ketab.png"),
     },
     wedding: {
       title: { en: "The Wedding", ar: "حفل الزفاف" },
