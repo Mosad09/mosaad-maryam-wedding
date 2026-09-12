@@ -55,19 +55,19 @@ const weddingData = {
       location: { en: "Bahtim, Shubra El Kheima, Egypt", ar: "بهتيم، شبرا الخيمة، مصر" },
       description: {
         en: "A joyful evening surrounded by family as we marked the beginning of our journey.",
-        ar: "سهرة حلوة جمعتنا مع أهلنا، واحتفلنا فيها ببداية حكايتنا.",
+        ar: "أهلنا اتجمعوا حوالينا في ليلة فرحانة، وباركوا لينا بداية حكايتنا.",
       },
       photo: asset("assets/images/events/engagement.jpg"),
     },
     katbKetab: {
       title: { en: "Katb Ketab", ar: "كتب الكتاب" },
-      date: { en: "October 5, 2026", ar: "٥ أكتوبر ٢٠٢٦" },
+      date: { en: "September 11, 2026", ar: "١١ سبتمبر ٢٠٢٦" },
       time: { en: "7:00 PM", ar: "٧:٠٠ مساءً" },
       description: {
         en: "The signing of our marriage contract, witnessed by our closest family.",
         ar: "كتبنا كتابنا بحضور أحلى ناس في حياتنا.",
       },
-      photo: asset("assets/images/events/katb-ketab.png"),
+      photo: asset("assets/images/events/katb-ketab.jpg"),
     },
     wedding: {
       title: { en: "The Wedding", ar: "حفل الزفاف" },
