@@ -30,7 +30,7 @@ function TrimLine(x1, y1, x2, y2, key) {
 // a single tap — that tap doubles as the user gesture that unlocks audio.
 const T_OPEN = 600; // flap folds open on a 3D hinge, seal rides along with it
 const T_RISE = 650; // invitation card fades/rises out of the envelope
-const T_HOLD = 1500; // pause so the revealed card can be read
+const T_HOLD = 1000; // pause so the revealed card can be read
 const T_WIPE = 750; // zoom into the envelope, into the site
 const T_REVEAL = 450; // this overlay itself fades away, revealing the site
                         // (already sitting there, unmoved) right through it
