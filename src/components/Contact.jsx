@@ -9,27 +9,6 @@ import ThemeToggle from "./ThemeToggle.jsx";
 
 const EASE = [0.22, 1, 0.36, 1];
 
-// Very faint drifting lines behind the section — a subtle "alive"
-// texture, not a decoration meant to be consciously noticed.
-function BackgroundLines() {
-  return (
-    <div className="pointer-events-none absolute inset-0 overflow-hidden opacity-20">
-      <motion.svg
-        viewBox="0 0 800 400"
-        preserveAspectRatio="none"
-        className="w-full h-full"
-        animate={{ opacity: [0.25, 0.55, 0.25] }}
-        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-      >
-        <line x1="-50" y1="60" x2="850" y2="140" stroke="#C9A227" strokeWidth="1" />
-        <line x1="-50" y1="190" x2="850" y2="90" stroke="#C9A227" strokeWidth="1" />
-        <line x1="-50" y1="300" x2="850" y2="380" stroke="#C9A227" strokeWidth="1" />
-        <line x1="-50" y1="410" x2="850" y2="260" stroke="#C9A227" strokeWidth="1" />
-      </motion.svg>
-    </div>
-  );
-}
-
 // One day-of helper's contact button. Tapping it doesn't call/message
 // directly — it opens a small menu so the guest picks WhatsApp or a
 // phone call themselves.
@@ -118,8 +97,7 @@ export default function Contact() {
   const primary = helpers[0];
 
   return (
-    <section id="contact" className="relative overflow-hidden py-20 px-6 bg-beige/40 dark:bg-charcoal/30">
-      <BackgroundLines />
+    <section id="contact" className="relative py-20 px-6 bg-beige/40 dark:bg-charcoal/30">
       <motion.div
         initial={{ opacity: 0, y: 16 }}
         whileInView={{ opacity: 1, y: 0 }}

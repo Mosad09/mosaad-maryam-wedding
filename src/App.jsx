@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import LoadingScreen from "./components/LoadingScreen.jsx";
 import EnvelopeIntro from "./components/EnvelopeIntro.jsx";
+import BackgroundLines from "./components/BackgroundLines.jsx";
 import Navbar from "./components/Navbar.jsx";
 import MusicPlayer from "./components/MusicPlayer.jsx";
 import Hero from "./components/Hero.jsx";
@@ -36,7 +37,9 @@ export default function App() {
           gated on `opened` rather than firing on mount for the same reason:
           otherwise it would already be sitting still by the time the
           envelope fades away. */}
-      <div className="min-h-screen">
+      <BackgroundLines />
+
+      <div className="relative z-10 min-h-screen">
         <Navbar />
         <MusicPlayer />
         <main>
