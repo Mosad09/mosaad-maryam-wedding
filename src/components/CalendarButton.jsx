@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import { useLanguage } from "../i18n/LanguageContext.jsx";
 import weddingData from "../data/weddingData.js";
 
@@ -44,11 +45,12 @@ function downloadICS() {
 export default function CalendarButton() {
   const { t } = useLanguage();
   return (
-    <button
+    <motion.button
       onClick={downloadICS}
+      whileTap={{ scale: 0.95 }}
       className="rounded-full bg-gold text-warmwhite px-6 py-3 font-display text-sm tracking-widest hover:brightness-110 transition"
     >
       {t("calendar.button")}
-    </button>
+    </motion.button>
   );
 }

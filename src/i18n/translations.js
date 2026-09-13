@@ -18,7 +18,6 @@ export const translations = {
       seconds: "ثانية",
       today: "النهاردة يومنا ❤️",
     },
-    schedule: { title: "برنامج يوم الفرح" },
     venue: {
       title: "هنكون فين",
       openMaps: "افتح الموقع على الخريطة",

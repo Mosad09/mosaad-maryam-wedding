@@ -4,6 +4,8 @@ import { useLanguage } from "../i18n/LanguageContext.jsx";
 import { useLocalStorage } from "../hooks/useLocalStorage.js";
 import weddingData from "../data/weddingData.js";
 
+const EASE = [0.22, 1, 0.36, 1];
+
 export default function Guestbook() {
   const { t } = useLanguage();
   const [entries, setEntries] = useLocalStorage(weddingData.guestbook.storageKey, []);
@@ -21,13 +23,27 @@ export default function Guestbook() {
   return (
     <section id="guestbook" className="py-24 px-6 bg-beige/40 dark:bg-charcoal/30">
       <div className="max-w-xl mx-auto text-center">
-        <h2 className="font-display text-4xl text-gold">{t("guestbook.title")}</h2>
-        <p className="font-display italic text-charcoal/70 dark:text-champagne/80 mt-2">
-          {t("guestbook.subtitle")}
-        </p>
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.55, ease: EASE }}
+        >
+          <h2 className="font-display text-4xl text-gold">{t("guestbook.title")}</h2>
+          <p className="font-display italic text-charcoal/70 dark:text-champagne/80 mt-2">
+            {t("guestbook.subtitle")}
+          </p>
+        </motion.div>
         <div className="section-divider" />
 
-        <form onSubmit={submit} className="mt-8 flex flex-col gap-3 text-left rtl:text-right">
+        <motion.form
+          onSubmit={submit}
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.4 }}
+          transition={{ duration: 0.55, delay: 0.1, ease: EASE }}
+          className="mt-8 flex flex-col gap-3 text-left rtl:text-right"
+        >
           <input
             value={name}
             onChange={(e) => setName(e.target.value)}
@@ -41,13 +57,14 @@ export default function Guestbook() {
             rows={3}
             className="rounded-sm gold-border bg-warmwhite dark:bg-dark px-4 py-3 font-body text-charcoal dark:text-champagne focus:outline-none focus:ring-2 focus:ring-gold"
           />
-          <button
+          <motion.button
             type="submit"
+            whileTap={{ scale: 0.96 }}
             className="mt-1 rounded-full bg-gold text-warmwhite px-6 py-3 font-display tracking-widest text-sm hover:brightness-110 transition"
           >
             {t("guestbook.submit")}
-          </button>
-        </form>
+          </motion.button>
+        </motion.form>
 
         <div className="mt-10 space-y-4 text-left rtl:text-right">
           {entries.length === 0 && (

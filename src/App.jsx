@@ -8,7 +8,6 @@ import ChildhoodSection from "./components/ChildhoodSection.jsx";
 import EngagementSection from "./components/EngagementSection.jsx";
 import KatbKetabSection from "./components/KatbKetabSection.jsx";
 import WeddingSection from "./components/WeddingSection.jsx";
-import WeddingSchedule from "./components/WeddingSchedule.jsx";
 import VenueSection from "./components/VenueSection.jsx";
 import Guestbook from "./components/Guestbook.jsx";
 import FAQ from "./components/FAQ.jsx";
@@ -25,33 +24,41 @@ export default function App() {
     return () => clearTimeout(id);
   }, []);
 
-  if (loading) return <LoadingScreen />;
-
-  if (!opened) {
-    return <EnvelopeIntro onComplete={() => setOpened(true)} />;
-  }
-
   return (
-    <div className="min-h-screen">
-      <Navbar />
-      <MusicPlayer />
-      <main>
-        <Hero />
-        <div id="story">
-          <ChildhoodSection />
-        </div>
-        <div id="events">
-          <EngagementSection />
-          <KatbKetabSection />
-          <WeddingSection />
-          <WeddingSchedule />
-        </div>
-        <VenueSection />
-        <Guestbook />
-        <FAQ />
-        <Contact />
-      </main>
-      <Footer />
-    </div>
+    <>
+      {/* The real site is mounted from the very first paint — it just sits
+          quietly behind the loading screen and the envelope, both opaque
+          full-screen overlays. Opening the envelope then reveals this same
+          tree in place instead of unmounting one page and mounting another,
+          so there's no handoff/seam between "the envelope" and "the site"
+          (no flash of a stale navbar state, no separate crossfade to keep
+          in sync — it's one continuous scene). Hero's entrance animation is
+          gated on `opened` rather than firing on mount for the same reason:
+          otherwise it would already be sitting still by the time the
+          envelope fades away. */}
+      <div className="min-h-screen">
+        <Navbar />
+        <MusicPlayer />
+        <main>
+          <Hero revealed={opened} />
+          <div id="story">
+            <ChildhoodSection />
+          </div>
+          <div id="events">
+            <EngagementSection />
+            <KatbKetabSection />
+            <WeddingSection />
+          </div>
+          <VenueSection />
+          <Guestbook />
+          <FAQ />
+          <Contact />
+        </main>
+        <Footer />
+      </div>
+
+      {loading && <LoadingScreen />}
+      {!loading && !opened && <EnvelopeIntro onComplete={() => setOpened(true)} />}
+    </>
   );
 }

@@ -15,7 +15,7 @@ export default function VenueSection() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true, amount: 0.4 }}
           transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-          className="w-full md:w-1/2 aspect-[4/3] gold-border rounded-sm overflow-hidden shadow-lg group order-first"
+          className="w-full md:w-1/2 aspect-[4/3] gold-border rounded-sm overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 group order-first"
         >
           <img
             src={venue.photo}
@@ -48,14 +48,24 @@ export default function VenueSection() {
             {pick(venue.address)}
           </p>
 
-          <a
+          <motion.a
             href={venue.mapsUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block mt-5 text-xs tracking-widest uppercase gold-border rounded-full px-6 py-3 text-gold hover:bg-gold/10 transition-colors"
+            whileTap={{ scale: 0.95 }}
+            whileHover={{ scale: 1.03 }}
+            className="mt-5 inline-flex items-center gap-2 text-xs tracking-widest uppercase gold-border rounded-full px-6 py-3 text-gold hover:bg-gold/10 transition-colors"
           >
+            <motion.span
+              aria-hidden="true"
+              className="text-sm"
+              animate={{ y: [0, -4, 0] }}
+              transition={{ duration: 1.4, repeat: Infinity, ease: "easeInOut" }}
+            >
+              📍
+            </motion.span>
             {t("venue.openMaps")}
-          </a>
+          </motion.a>
         </motion.div>
       </div>
     </section>

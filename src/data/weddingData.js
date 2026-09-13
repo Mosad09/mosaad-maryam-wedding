@@ -73,6 +73,7 @@ const weddingData = {
       title: { en: "The Wedding", ar: "حفل الزفاف" },
       date: { en: "October 5, 2026", ar: "٥ أكتوبر ٢٠٢٦" },
       time: { en: "7:00 PM", ar: "٧:٠٠ مساءً" },
+      guestArrival: { en: "Guests are welcome from 7:00 PM", ar: "استقبال الضيوف من الساعة ٧:٠٠ مساءً" },
       venue: { en: "Kempinski Concert Hall", ar: "قاعة كمبينسكي للحفلات" },
       address: {
         en: "Shubra El Kheima 2, Ismailia Canal Road, next to Al Tanmeya Club, Bahtim, Egypt",
@@ -81,13 +82,6 @@ const weddingData = {
       photo: asset("assets/images/events/wedding-venue.jpg"),
     },
   },
-
-  schedule: [
-    { time: { en: "7:00 PM", ar: "٧:٠٠ مساءً" }, label: { en: "Guest Arrival", ar: "استقبال الضيوف" } },
-    { time: { en: "7:00 PM", ar: "٧:٠٠ مساءً" }, label: { en: "Wedding", ar: "حفل الزفاف" } },
-    { time: { en: "9:00 PM", ar: "٩:٠٠ مساءً" }, label: { en: "Dinner", ar: "العشاء" } },
-    { time: { en: "10:00 PM", ar: "١٠:٠٠ مساءً" }, label: { en: "Celebration", ar: "الاحتفال" } },
-  ],
 
   venue: {
     name: { en: "Kempinski Concert Hall", ar: "قاعة كمبينسكي للحفلات" },

@@ -4,7 +4,13 @@ import { useLanguage } from "../i18n/LanguageContext.jsx";
 import weddingData from "../data/weddingData.js";
 import Countdown from "./Countdown.jsx";
 
-export default function Hero() {
+// `revealed` gates every entrance animation here instead of letting them
+// fire on mount: the whole site is mounted from page load (quietly behind
+// the loading screen and envelope, so there's no seam between "opening the
+// envelope" and "the site"), so if these animated on mount they'd already
+// be sitting still by the time the envelope reveals them. They wait for
+// the envelope to say the page is actually visible.
+export default function Hero({ revealed }) {
   const { pick } = useLanguage();
   const { groom, bride } = weddingData.couple;
 
@@ -24,7 +30,7 @@ export default function Hero() {
 
       <motion.p
         initial={{ opacity: 0, y: 8 }}
-        animate={{ opacity: 1, y: 0 }}
+        animate={revealed ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.6 }}
         className="font-display text-[11px] md:text-xs tracking-[0.35em] text-charcoal/60 dark:text-champagne/70 uppercase mb-3"
       >
@@ -43,9 +49,9 @@ export default function Hero() {
         />
         <motion.h1
           initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
+          animate={revealed ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-          className="font-couple-names text-6xl md:text-8xl text-gold leading-tight px-4"
+          className="font-couple-names text-5xl sm:text-6xl md:text-8xl text-gold leading-tight px-4"
         >
           {groom.nameAr} &amp; {bride.nameAr}
         </motion.h1>
@@ -55,7 +61,7 @@ export default function Hero() {
 
       <motion.p
         initial={{ opacity: 0, y: 8 }}
-        animate={{ opacity: 1, y: 0 }}
+        animate={revealed ? { opacity: 1, y: 0 } : {}}
         transition={{ delay: 0.3, duration: 0.6 }}
         className="font-display text-lg md:text-2xl text-charcoal dark:text-champagne italic"
       >
@@ -64,7 +70,7 @@ export default function Hero() {
 
       <motion.p
         initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
+        animate={revealed ? { opacity: 1 } : {}}
         transition={{ delay: 0.45, duration: 0.6 }}
         className="font-display tracking-[0.3em] text-sm md:text-base text-charcoal/70 dark:text-champagne/80 mt-3"
       >

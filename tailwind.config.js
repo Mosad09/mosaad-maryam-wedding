@@ -8,16 +8,19 @@ export default {
         gold: "#C9A227",
         champagne: "#E8D7A8",
         warmwhite: "#FFFDF8",
-        ivory: "#F7F3EA",
+        ivory: "#E9D8A8",
         beige: "#EDE5D5",
         charcoal: "#24211D",
         dark: "#151311",
       },
       fontFamily: {
-        arabicDisplay: ["'Aref Ruqaa Ink'", "'Aref Ruqaa'", "serif"],
-        arabicBody: ["'Amiri'", "'Noto Naskh Arabic'", "serif"],
-        display: ["'Playfair Display'", "'Cormorant Garamond'", "serif"],
-        body: ["'Inter'", "sans-serif"],
+        // Arabic fallbacks appended after the Latin display/body faces so
+        // every Arabic character (headings, dates, body copy) renders in
+        // Amiri/Noto Naskh Arabic instead of silently falling back to the
+        // browser's generic serif/sans-serif — Playfair Display and Inter
+        // carry no Arabic glyphs at all.
+        display: ["'Playfair Display'", "'Cormorant Garamond'", "'Amiri'", "'Noto Naskh Arabic'", "serif"],
+        body: ["'Inter'", "'Noto Naskh Arabic'", "'Amiri'", "sans-serif"],
       },
       keyframes: {
         float: {

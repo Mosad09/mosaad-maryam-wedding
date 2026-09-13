@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 import { useLanguage } from "../i18n/LanguageContext.jsx";
 import weddingData from "../data/weddingData.js";
 
@@ -28,12 +29,13 @@ export default function ShareButton() {
 
   return (
     <div className="relative inline-block">
-      <button
+      <motion.button
         onClick={handleShare}
+        whileTap={{ scale: 0.95 }}
         className="rounded-full gold-border px-6 py-3 font-display text-sm tracking-widest text-gold hover:bg-gold/10 transition-colors"
       >
         {t("share.button")}
-      </button>
+      </motion.button>
       {showToast && (
         <div
           role="status"

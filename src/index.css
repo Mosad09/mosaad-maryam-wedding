@@ -4,18 +4,28 @@
 
 html {
   scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
-  font-family: "Inter", sans-serif;
+  /* Site is Arabic-only (see LanguageContext.jsx), so the base body font
+     is the Arabic serif directly rather than a Latin font with a
+     conditional [dir="rtl"] override. */
+  font-family: "Amiri", "Noto Naskh Arabic", serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
-[dir="rtl"] body {
-  font-family: "Amiri", "Noto Naskh Arabic", serif;
-}
+/* NOTE: overflow-x is intentionally not set to hidden here — doing so on
+   html/body (with overflow-y left as the default `visible`) makes browsers
+   compute overflow-y as `auto` per the CSS overflow spec, which turns
+   html/body into their own scroll container and breaks `position: fixed`
+   elements (they stop tracking the viewport). Horizontal-overflow guarding
+   for the intro's 3D transforms is scoped to that component instead
+   (see App.jsx's root div). */
 
 .font-couple-names {
-  font-family: "Aref Ruqaa Ink", "Aref Ruqaa", serif;
+  font-family: "Aref Ruqaa Ink", "Aref Ruqaa", "Amiri", serif;
   text-shadow: 0 0 16px rgba(201, 162, 39, 0.18), 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 

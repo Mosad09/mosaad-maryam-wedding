@@ -21,12 +21,12 @@ export default function KatbKetabSection() {
           transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
           className="w-full md:w-1/2 flex justify-center"
         >
-          <div className="inline-block bg-warmwhite p-3 gold-border shadow-lg rounded-sm">
+          <div className="group inline-block bg-warmwhite p-3 gold-border shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-sm overflow-hidden">
             <img
               src={event.photo}
               alt={pick(event.title)}
               loading="lazy"
-              className="w-full max-w-sm md:max-w-md max-h-[420px] object-contain"
+              className="w-full max-w-sm md:max-w-md max-h-[420px] object-contain transition-transform duration-500 group-hover:scale-[1.03]"
               onError={(e) => {
                 e.currentTarget.src =
                   "data:image/svg+xml;utf8," +

@@ -41,10 +41,10 @@ export default function Countdown() {
       <p className="font-display italic text-sm tracking-widest text-charcoal/70 dark:text-champagne/80 uppercase">
         {t("countdown.title")}
       </p>
-      <div className="flex gap-4 md:gap-8">
+      <div className="flex flex-wrap justify-center gap-3 sm:gap-4 md:gap-8">
         {units.map((u) => (
-          <div key={u.label} className="flex flex-col items-center min-w-[60px]">
-            <span className="font-display text-4xl md:text-5xl text-gold tabular-nums">
+          <div key={u.label} className="flex flex-col items-center min-w-[56px]">
+            <span className="font-display text-3xl sm:text-4xl md:text-5xl text-gold tabular-nums">
               {String(u.value).padStart(2, "0")}
             </span>
             <span className="font-display text-xs tracking-[0.2em] uppercase text-charcoal/70 dark:text-champagne/70 mt-1">

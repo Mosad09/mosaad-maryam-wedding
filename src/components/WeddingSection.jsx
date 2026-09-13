@@ -33,7 +33,10 @@ export default function WeddingSection() {
         <p className="font-display text-lg text-warmwhite">
           {pick(wedding.date)} — {pick(wedding.time)}
         </p>
-        <p className="font-display text-warmwhite/80 mt-1">{pick(wedding.venue)}</p>
+        <p className="font-display text-sm tracking-wide text-champagne/90 mt-2">
+          {pick(wedding.guestArrival)}
+        </p>
+        <p className="font-display text-warmwhite/80 mt-3">{pick(wedding.venue)}</p>
         <p className="font-display text-warmwhite/60 text-sm">{pick(wedding.address)}</p>
       </motion.div>
     </section>
