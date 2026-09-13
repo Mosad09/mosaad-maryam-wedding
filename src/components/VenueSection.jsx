@@ -18,8 +18,15 @@ export default function VenueSection() {
           className="w-full md:w-1/2 flex justify-center order-first"
         >
           {/* framed print, like the engagement/katb-ketab photos — tall and
-              never cropped, shown in full via object-contain */}
-          <div className="group inline-block bg-warmwhite dark:bg-charcoal/40 p-3 gold-border shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-sm overflow-hidden">
+              never cropped, shown in full via object-contain. Tapping it
+              opens the same maps link as the button below. */}
+          <a
+            href={venue.mapsUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={t("venue.openMaps")}
+            className="group inline-block bg-warmwhite dark:bg-charcoal/40 p-3 gold-border shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-sm overflow-hidden cursor-pointer"
+          >
             <img
               src={venue.photo}
               alt={pick(venue.name)}
@@ -35,7 +42,7 @@ export default function VenueSection() {
                   );
               }}
             />
-          </div>
+          </a>
         </motion.div>
 
         <motion.div
