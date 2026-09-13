@@ -102,13 +102,6 @@ const weddingData = {
       },
     },
     {
-      q: { en: "Is parking available?", ar: "فيه جراچ للعربيات؟" },
-      a: {
-        en: "Yes, complimentary parking is available on-site for all guests.",
-        ar: "أيوة، فيه جراچ مجاني للضيوف كلهم جنب القاعة.",
-      },
-    },
-    {
       q: { en: "What time should I arrive?", ar: "أوصل الساعة كام؟" },
       a: {
         en: "Guests are welcome to arrive from 7:00 PM.",
