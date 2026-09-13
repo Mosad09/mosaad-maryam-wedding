@@ -126,7 +126,7 @@ const weddingData = {
     },
     helpers: [
       { name: "حازم", phone: "01055285583" },
-      { name: "يوسف", phone: "01158453169" },
+      { name: "يوسف", phone: "01158483169" },
     ],
   },
 
