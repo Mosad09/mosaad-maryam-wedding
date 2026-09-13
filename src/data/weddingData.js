@@ -129,7 +129,7 @@ const weddingData = {
   contacts: {
     intro: {
       en: "The guys' numbers are with you — reach out today if you get lost on the way or have any question.",
-      ar: "أرقام الشباب معاكم، تقدروا تتواصلوا معاهم النهارده لو حد تاه في الطريق أو محتاج أي سؤال.",
+      ar: "أرقام الشباب معاكم، تقدروا تتواصلوا معاهم النهارده لو حد تاه في الطريق أو محتاج أي سؤال. دوس ع اسم اي شخص منهم هيطلعلك رقمه.",
     },
     helpers: [
       { name: "حازم", phone: "01055285583" },
