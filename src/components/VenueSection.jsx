@@ -15,23 +15,27 @@ export default function VenueSection() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true, amount: 0.4 }}
           transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-          className="w-full md:w-1/2 aspect-[4/3] gold-border rounded-sm overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 group order-first"
+          className="w-full md:w-1/2 flex justify-center order-first"
         >
-          <img
-            src={venue.photo}
-            alt={pick(venue.name)}
-            loading="lazy"
-            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
-            onError={(e) => {
-              e.currentTarget.src =
-                "data:image/svg+xml;utf8," +
-                encodeURIComponent(
-                  `<svg xmlns='http://www.w3.org/2000/svg' width='600' height='450'><rect width='100%' height='100%' fill='%23EDE5D5'/><text x='50%' y='50%' font-size='20' fill='%23C9A227' text-anchor='middle' dominant-baseline='middle'>${pick(
-                    venue.name
-                  )}</text></svg>`
-                );
-            }}
-          />
+          {/* framed print, like the engagement/katb-ketab photos — tall and
+              never cropped, shown in full via object-contain */}
+          <div className="group inline-block bg-warmwhite dark:bg-charcoal/40 p-3 gold-border shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-sm overflow-hidden">
+            <img
+              src={venue.photo}
+              alt={pick(venue.name)}
+              loading="lazy"
+              className="w-full max-w-xs md:max-w-sm max-h-[600px] object-contain transition-transform duration-700 group-hover:scale-[1.03]"
+              onError={(e) => {
+                e.currentTarget.src =
+                  "data:image/svg+xml;utf8," +
+                  encodeURIComponent(
+                    `<svg xmlns='http://www.w3.org/2000/svg' width='600' height='450'><rect width='100%' height='100%' fill='%23EDE5D5'/><text x='50%' y='50%' font-size='20' fill='%23C9A227' text-anchor='middle' dominant-baseline='middle'>${pick(
+                      venue.name
+                    )}</text></svg>`
+                  );
+              }}
+            />
+          </div>
         </motion.div>
 
         <motion.div
