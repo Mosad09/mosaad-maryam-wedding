@@ -127,8 +127,13 @@ export default function EnvelopeIntro({ onComplete }) {
           className="relative"
           style={{ width: "min(78vw, 300px)", aspectRatio: "3 / 2", perspective: 1400 }}
           initial={{ opacity: 0, y: 46 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.65, delay: 0.4, ease: EASE }}
+          animate={{ opacity: zoomed ? 0 : 1, y: 0 }}
+          transition={{
+            y: { duration: 0.65, delay: 0.4, ease: EASE },
+            opacity: zoomed
+              ? { duration: 0.15, ease: "easeOut" }
+              : { duration: 0.65, delay: 0.4, ease: EASE },
+          }}
         >
           {/* envelope body — white card stock; the fold lines and a soft
               directional light (not color-blocked facets) give it shape.

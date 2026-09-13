@@ -33,7 +33,6 @@ export const translations = {
     faq: { title: "أسئلة ممكن تدور في بالكم" },
     contact: {
       title: "تواصل معانا",
-      whatsapp: "كلمنا على واتساب",
     },
     share: {
       button: "شارك الدعوة مع حد يهمه الفرح",

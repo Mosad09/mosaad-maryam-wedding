@@ -52,7 +52,7 @@ export default function KatbKetabSection() {
           <p className="font-display text-charcoal dark:text-champagne text-lg">
             {pick(event.time) ? `${pick(event.date)} — ${pick(event.time)}` : pick(event.date)}
           </p>
-          <p className="font-body text-sm text-charcoal/70 dark:text-champagne/70 mt-4 leading-relaxed">
+          <p className="font-body text-sm text-charcoal/70 dark:text-champagne/70 mt-4 leading-relaxed whitespace-pre-line">
             {pick(event.description)}
           </p>
         </motion.div>

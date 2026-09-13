@@ -43,7 +43,7 @@ const weddingData = {
 
   // Single combined childhood photo — replaces the old two-photo layout.
   childhood: {
-    title: { en: "Long before forever had a name.", ar: "من زمان، وقبل ما نعرف إن الأقدار هتجمعنا." },
+    title: { en: "Long before forever had a name.", ar: "كنا دايمًا قريبين، من غير ما يخطر في بالنا إن القُرب ده في يوم هيبقى هنا وجنة." },
     photo: asset("assets/images/childhood/childhood.png"),
   },
 
@@ -55,7 +55,7 @@ const weddingData = {
       location: { en: "Bahtim, Shubra El Kheima, Egypt", ar: "بهتيم، شبرا الخيمة، مصر" },
       description: {
         en: "A joyful evening surrounded by family as we marked the beginning of our journey.",
-        ar: "أهلنا اتجمعوا حوالينا في ليلة فرحانة، وباركوا لينا بداية حكايتنا.",
+        ar: "ولما جه وقتنا، فرحتنا كانت وسط أهلنا، وفرحتي بيكي ملهاش وصف.",
       },
       photo: asset("assets/images/events/engagement.jpg"),
     },
@@ -65,7 +65,7 @@ const weddingData = {
       time: { en: "7:00 PM", ar: "٧:٠٠ مساءً" },
       description: {
         en: "The signing of our marriage contract, witnessed by our closest family.",
-        ar: "كتبنا كتابنا بحضور أحلى ناس في حياتنا.",
+        ar: "الحمد لله الذي بنعمته تتم الصالحات ❤️\nيوم ١١ كملت فرحتي، وبدأت القصة وحكاية العمر مع رفيق العمر.\nربنا يبارك لنا في حياتنا ويجمع بينا دايمًا على خير.",
       },
       photo: asset("assets/images/events/katb-ketab.png"),
     },
@@ -77,7 +77,7 @@ const weddingData = {
       venue: { en: "Kempinski Concert Hall", ar: "قاعة كمبينسكي للحفلات" },
       address: {
         en: "Shubra El Kheima 2, Ismailia Canal Road, next to Al Tanmeya Club, Bahtim, Egypt",
-        ar: "شبرا الخيمه ثان ترعة الاسماعيلية بجوار نادي التنمية، بهتيم، مصر",
+        ar: "شبرا الخيمة قسم ثاني، طريق ترعة الإسماعيلية، بجوار نادي التنمية",
       },
       photo: asset("assets/images/events/wedding-venue.jpg"),
     },
@@ -87,7 +87,7 @@ const weddingData = {
     name: { en: "Kempinski Concert Hall", ar: "قاعة كمبينسكي للحفلات" },
     address: {
       en: "Shubra El Kheima 2, Ismailia Canal Road, next to Al Tanmeya Club, Bahtim, Egypt",
-      ar: "شبرا الخيمه ثان ترعة الاسماعيلية بجوار نادي التنمية، بهتيم، مصر",
+      ar: "شبرا الخيمة قسم ثاني، طريق ترعة الإسماعيلية، بجوار نادي التنمية",
     },
     photo: asset("assets/images/events/wedding-venue.jpg"),
     mapsUrl: "https://maps.app.goo.gl/NEjZftPk12Mmaqr39",
@@ -119,7 +119,7 @@ const weddingData = {
       q: { en: "What is the venue address?", ar: "عنوان القاعة إيه بالظبط؟" },
       a: {
         en: "Kempinski Concert Hall, Shubra El Kheima 2, Ismailia Canal Road, next to Al Tanmeya Club, Bahtim, Egypt.",
-        ar: "قاعة كمبينسكي للحفلات، شبرا الخيمة ٢، ترعة الإسماعيلية، جنب نادي التنمية، بهتيم، مصر.",
+        ar: "قاعة كمبينسكي للحفلات، شبرا الخيمة قسم ثاني، طريق ترعة الإسماعيلية، بجوار نادي التنمية.",
       },
     },
   ],
@@ -127,8 +127,14 @@ const weddingData = {
   guestbook: { storageKey: "wedding_guestbook_mosaad_maryam" },
 
   contacts: {
-    whatsapp: "01211331239",
-    whatsappUrl: "https://wa.me/201211331239",
+    intro: {
+      en: "The guys' numbers are with you — reach out today if you get lost on the way or have any question.",
+      ar: "أرقام الشباب معاكم، تقدروا تتواصلوا معاهم النهارده لو حد تاه في الطريق أو محتاج أي سؤال.",
+    },
+    helpers: [
+      { name: "حازم", phone: "01055285583" },
+      { name: "يوسف", phone: "01158453169" },
+    ],
   },
 
   seo: {
