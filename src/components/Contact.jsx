@@ -69,26 +69,41 @@ function HelperContact({ name, phone }) {
             {/* click-away layer */}
             <div className="fixed inset-0 z-10" onClick={() => setOpen(false)} />
             <motion.div
-              initial={{ opacity: 0, y: -8, scale: 0.95 }}
+              initial={{ opacity: 0, y: -12, scale: 0.85 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
-              exit={{ opacity: 0, y: -8, scale: 0.95 }}
-              transition={{ duration: 0.2, ease: EASE }}
-              className="absolute top-full mt-2 z-20 flex flex-col gap-2 rounded-lg bg-warmwhite dark:bg-dark gold-border shadow-xl p-2 w-40"
+              exit={{ opacity: 0, y: -12, scale: 0.85 }}
+              transition={{ duration: 0.3, ease: EASE }}
+              className="absolute top-full mt-3 z-20 flex flex-col gap-3 rounded-xl bg-warmwhite dark:bg-dark gold-border shadow-2xl p-4 w-56"
             >
-              <a
+              <motion.a
                 href={waUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-md bg-[#25D366] text-white text-sm py-2 text-center font-display tracking-wide hover:brightness-105 active:scale-95 transition"
+                animate={{ backgroundColor: "#25D366" }}
+                whileHover={{
+                  scale: 1.06,
+                  backgroundColor: "#1DA851",
+                  transition: { duration: 0.3, ease: EASE },
+                }}
+                whileTap={{ scale: 0.95 }}
+                className="rounded-lg text-white text-lg py-3 text-center font-display tracking-wide shadow-md"
               >
                 واتساب
-              </a>
-              <a
+              </motion.a>
+              <motion.a
                 href={telUrl}
-                className="rounded-md gold-border text-gold text-sm py-2 text-center font-display tracking-wide hover:bg-gold/10 active:scale-95 transition"
+                animate={{ backgroundColor: "rgba(201,162,39,0)" }}
+                whileHover={{
+                  scale: 1.06,
+                  backgroundColor: "#C9A227",
+                  color: "#FFFDF8",
+                  transition: { duration: 0.3, ease: EASE },
+                }}
+                whileTap={{ scale: 0.95 }}
+                className="rounded-lg gold-border text-gold text-lg py-3 text-center font-display tracking-wide"
               >
                 مكالمة
-              </a>
+              </motion.a>
             </motion.div>
           </>
         )}
