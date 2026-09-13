@@ -19,7 +19,7 @@ function HelperContact({ name, phone }) {
 
   return (
     <div className="relative flex flex-col items-center gap-2">
-      <p className="font-display text-xs text-charcoal/60 dark:text-champagne/60">
+      <p className="font-display text-sm text-charcoal/60 dark:text-champagne/60">
         اضغط هنا للتواصل
       </p>
       <motion.button
@@ -29,7 +29,7 @@ function HelperContact({ name, phone }) {
         transition={{ duration: 2.4, repeat: Infinity, ease: "easeInOut" }}
         whileTap={{ scale: 0.95 }}
         aria-expanded={open}
-        className="rounded-full bg-gold text-warmwhite px-8 py-3 font-display text-sm tracking-widest shadow-md hover:brightness-110 transition"
+        className="rounded-full bg-gold text-warmwhite px-12 py-4 font-display text-xl tracking-widest shadow-md hover:brightness-110 transition"
       >
         {name}
       </motion.button>
