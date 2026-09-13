@@ -9,6 +9,27 @@ import ThemeToggle from "./ThemeToggle.jsx";
 
 const EASE = [0.22, 1, 0.36, 1];
 
+// Very faint drifting lines behind the section — a subtle "alive"
+// texture, not a decoration meant to be consciously noticed.
+function BackgroundLines() {
+  return (
+    <div className="pointer-events-none absolute inset-0 overflow-hidden opacity-20">
+      <motion.svg
+        viewBox="0 0 800 400"
+        preserveAspectRatio="none"
+        className="w-full h-full"
+        animate={{ opacity: [0.25, 0.55, 0.25] }}
+        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+      >
+        <line x1="-50" y1="60" x2="850" y2="140" stroke="#C9A227" strokeWidth="1" />
+        <line x1="-50" y1="190" x2="850" y2="90" stroke="#C9A227" strokeWidth="1" />
+        <line x1="-50" y1="300" x2="850" y2="380" stroke="#C9A227" strokeWidth="1" />
+        <line x1="-50" y1="410" x2="850" y2="260" stroke="#C9A227" strokeWidth="1" />
+      </motion.svg>
+    </div>
+  );
+}
+
 // One day-of helper's contact button. Tapping it doesn't call/message
 // directly — it opens a small menu so the guest picks WhatsApp or a
 // phone call themselves.
@@ -25,11 +46,19 @@ function HelperContact({ name, phone }) {
       <motion.button
         type="button"
         onClick={() => setOpen((o) => !o)}
-        animate={{ y: [0, -5, 0] }}
-        transition={{ duration: 2.4, repeat: Infinity, ease: "easeInOut" }}
+        animate={{ y: [0, -5, 0], backgroundColor: "#C9A227" }}
+        transition={{
+          y: { duration: 2.4, repeat: Infinity, ease: "easeInOut" },
+          backgroundColor: { duration: 0.4, ease: EASE },
+        }}
+        whileHover={{
+          scale: 1.08,
+          backgroundColor: "#8F6F1F",
+          transition: { duration: 0.35, ease: EASE },
+        }}
         whileTap={{ scale: 0.95 }}
         aria-expanded={open}
-        className="rounded-full bg-gold text-warmwhite px-12 py-4 font-display text-xl tracking-widest shadow-md hover:brightness-110 transition"
+        className="rounded-full text-warmwhite px-12 py-4 font-display text-xl tracking-widest shadow-md transition-shadow hover:shadow-xl"
       >
         {name}
       </motion.button>
@@ -74,13 +103,14 @@ export default function Contact() {
   const primary = helpers[0];
 
   return (
-    <section id="contact" className="py-20 px-6 bg-beige/40 dark:bg-charcoal/30">
+    <section id="contact" className="relative overflow-hidden py-20 px-6 bg-beige/40 dark:bg-charcoal/30">
+      <BackgroundLines />
       <motion.div
         initial={{ opacity: 0, y: 16 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.4 }}
         transition={{ duration: 0.55, ease: EASE }}
-        className="max-w-xl mx-auto text-center"
+        className="relative z-10 max-w-xl mx-auto text-center"
       >
         <h2 className="font-display text-4xl text-gold">{t("contact.title")}</h2>
         <div className="section-divider" />
